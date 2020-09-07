@@ -1,3 +1,2 @@
-<h1> Nova mensagem de {{ $name }}</h1>
-<h2>Email: {{ $email }}</h2>
-<p> Mensagem: {{ $userMessage }}</p>
+<p> <strong> Mensagem:</strong> {{ $userMessage }}</p>
+<a href="mailto:{{ $email }}"> Responder {{ $nome }}</a>
