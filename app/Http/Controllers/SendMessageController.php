@@ -12,7 +12,7 @@ class SendMessageController extends Controller
     public function send(Request $request)
     {
 
-	    // Mail::to('mickael.souza.if@gmail.com')->send(new SendMessage ($request['name'], $request['email'], $request['message']));
+	    Mail::to('mickael.souza.if@gmail.com')->send(new SendMessage ($request['name'], $request['email'], $request['message']));
 	    // Mail::to('mickael.souza.if@gmail.com')->send(new SendMessage ('Sus', 'sus', 'sas')); 
 	    dd($request);
 		if(Mail::failures()) {
