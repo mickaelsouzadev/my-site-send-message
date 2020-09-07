@@ -16,9 +16,15 @@ class SendMessage extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    private $name;
+    private $email;
+    private $userMessage;
+
+    public function __construct($name, $email, $userMessage)
     {
-        //
+        $this->name = $name;
+        $this->email = $email;
+        $this->userMessage = $userMessage;
     }
 
     /**
@@ -28,6 +34,12 @@ class SendMessage extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->subject("Nova mensagem de {$this->name}")
+                ->view('emails.mail')
+                ->with([
+                    'name' => $this->name,
+                    'email' => $this->email,
+                    'userMessage' => $this->userMessage
+                ]);
     }
 }

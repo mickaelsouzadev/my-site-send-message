@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Controllers;
+use App\Mail\SendMessage;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::post('/send', 'SendMessageController@send');
 
-	
+Route::get('/', function() {
+	echo "Tá perdido parceiro?";
 });
