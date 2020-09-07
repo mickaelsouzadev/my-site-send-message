@@ -1,2 +1,2 @@
 <p> <strong> Mensagem:</strong> {{ $userMessage }}</p>
-<a href="mailto:{{ $email }}"> Responder {{ $nome }}</a>
+<a href="mailto:{{ $email }}"> Responder {{ $name }}</a>
