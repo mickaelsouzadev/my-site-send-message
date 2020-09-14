@@ -13,8 +13,7 @@ class SendMessageController extends Controller
     {
 
 	    Mail::to('mickael.souza.if@gmail.com')->send(new SendMessage ($request['name'], $request['email'], $request['message']));
-	    // Mail::to('mickael.souza.if@gmail.com')->send(new SendMessage ('Sus', 'sus', 'sas')); 
-	    dd($request);
+	 
 		if(Mail::failures()) {
 			return response()->error("Não foi possível enviar a sua mensagem, tente novamente mais tarde");
 		}
